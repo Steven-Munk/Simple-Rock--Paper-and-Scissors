@@ -1,0 +1,145 @@
+body {
+  margin: 0px;
+  background-color: rgba(230, 230, 230, 1);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.d-flex {
+  display: flex;
+  gap: 16px;
+}
+
+.display-game-container {
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  border-radius: 20px;
+  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-move {
+  transform: rotate(90deg);
+}
+
+.computer-move {
+  transform: scaleX(-1) rotate(90deg);
+}
+
+@keyframes playAnimation {
+  0% {
+    position: relative;
+    bottom: 0px;
+  }
+  25% {
+    position: relative;
+    bottom: 20px;
+  }
+  37% {
+    position: relative;
+    bottom: 0px;
+  }
+  50% {
+    position: relative;
+    bottom: 20px;
+  }
+  63%{
+    position: relative;
+    bottom: 0px;
+  }
+  75% {
+    position: relative;
+    bottom: 20px;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+.animated {
+  animation: playAnimation 1s ease-in;
+}
+
+.display-moves-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.move-btn-container {
+  border-radius: 20px;
+  border: 5px solid black;
+  cursor: pointer;
+  transition: 75ms ease-in-out;
+}
+
+.move-btn-container:hover {
+  transform: scale(0.95);
+}
+
+.move-btn-container:active {
+  background-color: rgba(255, 0, 0, 0.332);
+}
+
+.move-button {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 75px;
+}
+
+th {
+  border-bottom: 1px solid black;
+  padding: 8px;
+  font-size: 20px;
+}
+
+th,
+td {
+  width: 100px;
+}
+
+td {
+  height: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+
+th:first-child,
+td:first-child {
+  border-right: 1px solid black;
+  border-left: none;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
