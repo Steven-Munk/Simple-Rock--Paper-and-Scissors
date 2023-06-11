@@ -14,33 +14,37 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <h1>Wähle Stein, Papaier oder Schere um zu spielen!</h1>
-
+    <h1 id="title">Wähle Stein, Papier oder Schere um zu spielen!</h1>
     <div class="d-flex">
       <div class="main-container">
         <div class="display-game-container">
-            <img id="playerMove" class="player-move" src="/images/icons8-geballte-faust-100.png">
+          <img id="playerMove" class="player-move" src="/images/rock.png" />
         </div>
         <div class="display-moves-container">
-            <div onclick="play('paper')" class="move-btn-container"><img class="move-button" src="/images/icons8-ganze-hand-100.png"></div>
-            <div onclick="play()" class="move-btn-container"><img class="move-button" src="/images/icons8-geballte-faust-100.png"></div>
-            <div onclick="play('scissors')" class="move-btn-container"><img class="move-button" src="/images/icons8-hand_-schere-100.png"></div>
+          <div onclick="play('paper')" class="move-btn-container">
+            <img class="move-button" src="/images/paper.png" />
+          </div>
+          <div onclick="play('rock')" class="move-btn-container">
+            <img class="move-button" src="/images/rock.png" />
+          </div>
+          <div onclick="play('scissors')" class="move-btn-container">
+            <img class="move-button" src="/images/scissors.png" />
+          </div>
         </div>
       </div>
-
       <div class="main-container">
         <div class="display-game-container">
-            <img id="computerMove" class="computer-move" src="/images/icons8-geballte-faust-100.png">
+          <img id="computerMove" class="computer-move" src="/images/rock.png" />
         </div>
         <table>
-            <tr>
-                <th>Player</th>
-                <th>Computer</th>
-            </tr>
-            <tr>
-                <td>0</td>
-                <td>0</td>
-            </tr>
+          <tr>
+            <th>Player</th>
+            <th>Computer</th>
+          </tr>
+          <tr>
+            <td id="playerScore">0</td>
+            <td id="computerScore">0</td>
+          </tr>
         </table>
       </div>
     </div>
